@@ -23,7 +23,7 @@ class knnClass:
         self.index = index
         self.outData = [] 
     def calDist(self):
-        for i in range(5000):
+        for i in range(10000):
             res = float(0)
             for t in range(784):
                 res += (float(x_test[self.index][t])-float(x_train[i][t]))**2
@@ -52,7 +52,7 @@ class myKnnClass:
         self.index = index
         self.outData = [] 
     def calDist(self):
-        for i in range(1000):
+        for i in range(2000):
             res = float(0)
             for k in range(500):
                 ran = randrange(0, 784)

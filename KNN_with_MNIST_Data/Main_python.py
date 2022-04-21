@@ -1,7 +1,10 @@
 import KNN_class as knn
 import numpy as np
+import sys
 
-size = 100
+sys.stdout = open('output3.txt', 'w')
+
+size = 10
 sample = np.random.randint(0, knn.t_test.shape[0], size)
 
 accuracy = float(size)
@@ -29,5 +32,5 @@ for i in sample:
 accuracy /= size
 print("accuracy = "+str(accuracy))
 
-
+sys.stdout.close()
 
